@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <link rel = "stylesheet" href = "style.css">
+    <script src = "CRUD-operation.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Student Form</h2>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="firstname">Firstname</label>
+            </div>
+            <div class="input-error">
+                <input type="text" name = "fname" id="firstname" placeholder="Enter Firstname">
+                <span class="err" id="validate-firstname">*Required</span>
+            </div>
+        </div>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="lastname">Lastname</label>
+            </div>
+            <div class="input-error">
+            <input type="text" name = "lname" id="lastname" placeholder="Enter Lastname">
+            <span class="err" id="validate-lastname">*Required</span>
+            </div>
+        </div>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="address">Address</label>
+            </div>
+            <div class="input-error">
+            <textarea name="address" cols="21" row="10" id="address" placeholder="Enter Address"></textarea>
+            <span class="err" id="validate-address">*Required</span>
+            </div>
+        </div>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="gender">Gender</label>
+            </div>
+            <div class="input-error">
+                <input type="radio" name = "gender" value="Male" id="male"><label for="male">Male</label>
+                <input type="radio" name = "gender" value="Female" id="female"><label for="female">Female</label>
+                <input type="radio" name = "gender" value="Other" id="other"><label for="other">Other</label>
+                <span class="err" id="validate-gender">*Required</span>
+            </div>
+        </div>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="email">Email</label>
+            </div>
+            <div class="input-error">
+            <input type="email" name = "email" id="email" placeholder="Enter Email" >
+            <span class="err" id="validate-email">*Required</span>
+            </div>
+        </div>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="pass">Password</label>
+            </div>
+            <div class="input-error">
+            <input type="password" name = "pass" id="password" placeholder="Enter Password">
+            <span class="err" id="validate-password">*Required</span>
+            </div>
+        </div>
+        <div class = "input-field">
+            <div class="labelname">
+                <label for="hobby">Hobby</label>
+            </div>
+            <div class="input-error">
+                <input type="checkbox" name = "hobby" class="h1" value= "Cricket" id="cricket"><label for="cricket">Cricket</label>
+                <input type="checkbox" name = "hobby" class="h1" value= "Music" id="music"><label for="music">Music</label>
+                <input type="checkbox" name = "hobby" class="h1" value= "Traveling" id="traveling"><label for="traveling">Traveling</label>
+                <span class="err" id="validate-hobby">*Required</span>
+                </div>
+            </div>
+        
+        <div class = "btn">
+                <div id="resetbtn">
+                    <button type="reset" onclick="reset()">Reset</button>
+                </div>
+                <div id="submitbtn">
+                    <button type="submit" onclick="submit()">Submit</button>
+                </div>
+        </div>
+    </div>
+
+    <table class="table">
+          <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Address</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Hobby</th>
+            <th scope="col">Operation</th>
+          </tr>
+            <tbody id="tabledata">
+          </tbody>
+        
+      </table>
+</body>
+</html>
